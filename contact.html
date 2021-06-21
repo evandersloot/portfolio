@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-	
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,15 +35,15 @@
 		</header>
 
 		<div class="input-box">
-			<form action="email" method="post" id="contact-form">
+			<form action="contact.php" method="post" id="contact-form">
 				<label class="standard-label" for="contact-email">Email: </label>
-				<input type="email" id="contact-email" required>
+				<input type="email" id="contact-email" required placeholder="example@email.com">
 
 				<label class="standard-label" for="telephone">Telephone: </label>
-				<input type="tel" id="telephone">
+				<input type="tel" id="telephone" placeholder="111-222-3333">
 
 				<label class="standard-label" for="message">Message: </label>
-				<textarea maxlength="240" required id="message"></textarea>
+				<textarea maxlength="240" required id="message" placeholder="Type your message here."></textarea>
 
 				<input type="submit" class="send-message" value="Send Message">
 			</form>
@@ -69,6 +69,6 @@
 			</div>
 		</footer>
 
-	<script src="js/tota11y.min.js"></script>	
+	<script src="js/tota11y.min.js"></script>
 	</body>
 </html>
