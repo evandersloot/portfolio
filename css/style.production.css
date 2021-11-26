@@ -111,6 +111,11 @@ body {
 	margin-bottom: 5px;
 }
 
+.social-media img {
+	height: 30px;
+	width: auto;
+}
+
 h1 {
 	font-size: 30px;
 	font-weight: 700;
@@ -159,9 +164,8 @@ a:active {
 }
 
 .project-img {
-	height: 500px;
-	width: 500px;
-}
+	height: 265px;
+} 
 
 .skills {
 	display: -ms-grid;
@@ -256,7 +260,7 @@ h3 {
 	background-color: rgba(17, 18, 96, 0.84) 50%;
 	display: block;
 	margin-bottom: 0px;
-	width: 200%;
+	width: 3500px;
 	height: 200;
 	position: absolute;
 	overflow: hidden;
@@ -273,13 +277,14 @@ h3 {
 	height: 75px;
 	width: 75px;
 	margin-left: 0px;
+	margin-right: 0px;
 	margin-top: 20px;
 }
 
 @keyframes floatText {
 	
 	from {
-	  left: -110%;
+	  left: -130%;
 	}
 	to {
 	  left: -5%;
