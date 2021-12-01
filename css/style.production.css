@@ -264,7 +264,7 @@ h3 {
 	height: 200;
 	position: absolute;
 	overflow: hidden;
-	animation: floatText 12s infinite alternate ease-in-out;
+	animation: floatText 25s infinite alternate ease-in-out;
 }
 
 .my-skills div {
