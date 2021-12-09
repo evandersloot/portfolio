@@ -76,11 +76,11 @@ body {
 
 .profile__portrait {
 	float: left;
-	width: 200px;
-	height: 250px;
+	width: 215px;
+	height: 300px;
 	margin-right: 40px;
 	margin-top: 25px;
-	border-radius: 50%;
+	border-radius: 35%;
 }
 
 .profile__portrait:last-child {
@@ -175,8 +175,14 @@ a:active {
 	color: lightgray;
 }
 
+a.resume {
+	color: lightgray;
+	margin-left: 15px;
+}
+
 a.my-code {
 	color:lightgray;
+	margin-left: 15px;
 }
 
 .my-code:hover {
@@ -192,13 +198,7 @@ a.my-code {
 	color: coral;
 }
 
-.my-link {
-	color: black;
-}
 
-#my-link {
-	color: navy;
-}
 
 .grid__item {
 	display: inline-block;
