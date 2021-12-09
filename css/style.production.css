@@ -21,8 +21,13 @@ body {
 	        box-sizing: border-box;
 }
 
+.navigation-list_item {
+	color: rgba(17, 18, 96, 0.84);
+}
+
 .navigation-list__item--active {
 	text-decoration: none;
+	color:rgba(17, 18, 96, 0.84)
 }
 
 .navigation-list {
