@@ -1,11 +1,12 @@
 
-body {
+body, html {
 	background-image: linear-gradient(
         to bottom,
         silver,
     	rgba(17, 18, 96, 0.84) 50%
     );
 	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 body {
@@ -21,6 +22,12 @@ body {
 	        box-sizing: border-box;
 }
 
+.main-navigation {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
 .navigation-list_item {
 	color: rgba(17, 18, 96, 0.84);
 }
@@ -30,13 +37,11 @@ body {
 	color:rgba(17, 18, 96, 0.84)
 }
 
-.navigation-list {
-	list-style-type: none;
-}
-
 .navigation-list li {
 	display: inline-block;
+	position: relative;
 	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .page-header {
@@ -73,42 +78,19 @@ body {
 	text-align: right;
 }
 
-.profile {
-	max-width: 1000px;
-	height: 600px;
-	margin: 0 auto;
-}
-
-.profile__portrait {
-	float: left;
-	width: 215px;
-	height: 300px;
-	margin-right: 40px;
-	margin-top: 25px;
-	border-radius: 35%;
-}
-
-.profile__portrait:last-child {
-	margin-top: 50px;
-}
-
-.page-footer {
-	position: relative;
-	width: 100%;
-	height: 200px;
-}
-
 .page-footer {
 	clear: both;
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	text-align: center;
-	position: static;
+	position: relative;
+	width: 100%;
+	max-width: auto;
+	height: 200px;
 }
 
 .social-media {
@@ -151,8 +133,32 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
-a:active {
-  color: red;
+.profile {
+	max-width: 750px;
+	width: auto;
+	height: 100%;
+    margin: 0 auto;
+}
+
+.profile__portrait {
+	float: left;
+	width: 215px;
+	max-width: 100%;
+	height: 300px;
+	min-height: auto;
+	margin-right: 40px;
+	margin-top: 75px;
+	border-radius: 35%;
+}
+
+.my-resume {
+	margin-bottom: 2px;
+	text-align: center;
+	margin-right: 30px;
+}
+
+a.resume {
+	color: lightgray;
 }
 
 .about {
@@ -168,21 +174,12 @@ a:active {
 	text-decoration: underline;
 }
 
-.project-img {
-	height: 265px;
-} 
-
 .skills {
 	display: -ms-grid;
 	display: grid;
 	width: 50%;
 	text-align: center;
 	color: lightgray;
-}
-
-a.resume {
-	color: lightgray;
-	margin-left: 15px;
 }
 
 a.my-code {
@@ -203,21 +200,23 @@ a.my-code {
 	color: coral;
 }
 
-
-
 .grid__item {
-	display: inline-block;
-	width: 33%;
+	width: auto;
+	float: left;
 }
 
-@supports (display: grid) {
+@supports (display: inline-grid) {
 .grid {
-	display: -ms-grid;
-	display: grid;
+	display: -ms-inline-grid;
+	display: inline-grid;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-flow: column wrap;
 	-ms-grid-columns: 1fr 20px 1fr;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
+	grid-gap: 10px;
 	margin: 0px;
+	align-items: center;
 	}
 }
 
@@ -226,7 +225,14 @@ a.my-code {
 	width: auto;
 	min-height: auto;
 	margin: 10px;
+	margin-right: 20px;
 }
+
+.project-img {
+	height: auto;
+	max-height: 265px;
+	max-width: 100%;
+} 
 
 .grid__item a, p {
 	color: lightgray;
@@ -243,7 +249,7 @@ a.my-code {
 }
 
 hr {
-	margin-bottom: 2px;
+	margin-bottom: auto;
 }
 
 h3 {
@@ -252,46 +258,32 @@ h3 {
 }
 
 .my-skills {
-	display: flex;
-	flex-direction: row;
-	width: 110vw;
-	transform: translateX(-5%);
-	height: 150px;
-	margin-top: 50px;
-	margin-left: 0px;
-}
-  
-.my-skills span {
-	background-color: rgba(17, 18, 96, 0.84) 50%;
-	display: block;
-	margin-bottom: 0px;
-	width: 3500px;
-	height: 200;
-	position: absolute;
-	overflow: hidden;
-	animation: floatText 25s infinite alternate ease-in-out;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	width: 75%;
+	min-width: auto;
+	position: relative;
+	margin: auto;
+	margin-top: 25px;
+	border: 3px solid lightgray;
+	padding: 10px;
 }
 
-.my-skills div {
-	float: left;
-	height: 100px;
-	margin: auto 50px;
+.my-skill-item {
+	opacity: .8;
+	align-self: auto;
 }
 
 .my-skill-item img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding-top: 3px;
 	height: 75px;
+	min-height: auto;
 	width: 75px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 20px;
+	max-width: 100%;
 }
-
-@keyframes floatText {
-	
-	from {
-	  left: -130%;
-	}
-	to {
-	  left: -5%;
-	}
-  }
+ 
